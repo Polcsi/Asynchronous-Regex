@@ -56,11 +56,11 @@ async function analyzeData()
 {
     try
     {
-        const datas = await readJSONFile("data.json");
+        const data = await readJSONFile("data.json");
     
-        for (let i = 0; i < datas.length; i++) {
-            let email = datas[i].email;
-            let phone = datas[i].phone;
+        for (let i = 0; i < data.length; i++) {
+            let email = data[i].email;
+            let phone = data[i].phone;
 
             let emailResult = await matchEmail(email);
             let phoneResult = await matchPhone(phone);
